@@ -1,0 +1,28 @@
+{
+  "name": "node-bandwidth-tester",
+  "version": "0.0.1",
+  "description": "A quick NodeJS client & server for having a Rasperry Pi Zero measure bandwidth & report it to a remote server",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecaron/node-bandwidth-tester.git"
+  },
+  "keywords": [
+    "bandwidth"
+  ],
+  "author": "Eric Caron <eric.caron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecaron/node-bandwidth-tester/issues"
+  },
+  "homepage": "https://github.com/ecaron/node-bandwidth-tester#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "dotenv": "^2.0.0",
+    "jjg-ping": "^1.0.1",
+    "request": "^2.75.0"
+  }
+}
