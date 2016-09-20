@@ -20,6 +20,7 @@
     "async": "^2.0.1",
     "dotenv": "^2.0.0",
     "jjg-ping": "^1.0.1",
+    "nedb": "^1.8.0",
     "request": "^2.75.0"
   },
   "devDependencies": {
