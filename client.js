@@ -7,6 +7,21 @@ if (typeof process.env.PING_REMOTE === 'undefined' || typeof process.env.TARGET_
   process.exit();
 }
 
+if (typeof process.env.ODDS_OF_RUNNING !== 'undefined') {
+  var oddsOfRunning = parseFloat(process.env.ODDS_OF_RUNNING);
+  if (oddsOfRunning < 0 || oddsOfRunning > 1 || isNaN(oddsOfRunning)) {
+    console.warn('ODDS_OF_RUNNING must be >=0 and <= 1');
+    process.exit();
+  }
+  var runScore = process.env.ODDS_OF_RUNNING - Math.random();
+  if (runScore < 0) {
+    console.log('Did not satisfy required odds of running');
+    process.exit();
+  }
+}
+console.log('Satisfied odds');
+process.exit();
+
 var async = require('async');
 var request = require('request');
 var Datastore = require('nedb');
