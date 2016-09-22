@@ -19,8 +19,6 @@ if (typeof process.env.ODDS_OF_RUNNING !== 'undefined') {
     process.exit();
   }
 }
-console.log('Satisfied odds');
-process.exit();
 
 var async = require('async');
 var request = require('request');
@@ -46,5 +44,23 @@ async.series({
       if (err) console.warn(err);
       else console.log('Wrote to local datastore');
     });
+  }
+  if (typeof process.env.REMOTE_SERVER !== 'undefined') {
+    request.post(
+      { url: process.env.REMOTE_SERVER,
+        headers: {
+          'api-key': process.env.REMOTE_API_KEY
+        },
+        form: {
+          machine: doc.machine,
+          datetime: doc.date,
+          data: JSON.stringify(doc.data)
+        }
+      },
+      function (err, httpResponse, body) {
+        if (err) console.warn(err);
+        if (typeof httpResponse !== 'undefined') console.log(body);
+      }
+    );
   }
 });
