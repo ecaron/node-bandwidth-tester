@@ -1,7 +1,8 @@
-http://speedtest.sjc01.softlayer.com/downloads/test100.zip
-  data: 
-   { url: 'http://speedtest.sjc01.softlayer.com/downloads/test100.zip?cacheBuster=1474255689839',
-     dataSizeKB: 98616.7265625,
-     latency: 4,
-     throughput: 3323.36 } }
+# Node Bandwidth Tester
 
+
+## Sample Bandwidth Chart
+![Bandwidth Chart](remote-host-example/bandwidth-chart.png?raw=true "Bandwidth Chart")
+
+## Sample Latency Chart
+![Latency Chart](remote-host-example/latency-chart.png?raw=true "Latency Chart")
