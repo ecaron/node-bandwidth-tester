@@ -1,5 +1,5 @@
 <?php
-if (empty($_SERVER['HTTP_API_KEY']) || $_SERVER['HTTP_API_KEY'] !== '7afe2324-01de-4152-93d7-121decb6aff6') {
+if (empty($_SERVER['HTTP_API_KEY']) || $_SERVER['HTTP_API_KEY'] !== 'SOME-RANDOM-KEY') {
   die('Missing API key, or API key does not match');
 }
 
