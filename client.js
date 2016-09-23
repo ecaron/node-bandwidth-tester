@@ -2,8 +2,8 @@
 
 require('dotenv').config();
 
-if (typeof process.env.PING_REMOTE === 'undefined' || typeof process.env.TARGET_FILE === 'undefined') {
-  console.warn('PING_REMOTE and/or TARGET_FILE not defined in .env. See sample.env for an example');
+if (typeof process.env.PING_REMOTE === 'undefined' || typeof process.env.TARGET_FILE === 'undefined' || typeof process.env.MACHINE_NAME === 'undefined') {
+  console.warn('PING_REMOTE, TARGET_FILE and MACHINE_NAME must all be environment variables or defined in .env');
   process.exit();
 }
 
